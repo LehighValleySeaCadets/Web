@@ -34,6 +34,15 @@ a, .btn-link {
     outline: 1px solid red;
 }
 
+#top-menu a {
+    display: inline-block;
+    font-size: 14px;
+    padding-right: 22px;
+}
+
+#top-menu > a {
+    padding: 0px 22px 0px 0px;
+}
 .validation-message {
     color: red;
 }

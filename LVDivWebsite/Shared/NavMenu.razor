@@ -1,39 +1,23 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">LVDivWebsite</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+﻿<div class="container">
+
+    <div class="top-navigation collapse navbar-collapse d-flex flex-row-reverse">
+        <ul id="top-menu">
+            <NavLink class="blazor-navlink" style="display: inline-block;
+                                                            font-size: 14px;
+                                                            color: #ffffff;
+                                                            padding-right: 22px;
+                                                            text-transform: uppercase;
+                                                            text-underline-position: unset;
+                                                            text-decoration-color: #ffffff;">
+                Join
+            </NavLink>
+            <NavLink class="blazor-navlink" style="display: inline-block;
+                                                            font-size: 14px;
+                                                            padding-right: 22px;
+                                                            text-transform: uppercase;
+                                                            text-decoration-color: #ffffff;">
+                Parents
+            </NavLink>
+        </ul>
     </div>
 </div>
-
-<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
-            </NavLink>
-        </div>
-    </nav>
-</div>
-
-@code {
-    private bool collapseNavMenu = true;
-
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
-}
