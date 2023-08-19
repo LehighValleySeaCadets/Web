@@ -1,5 +1,11 @@
-﻿<Navlink></Navlink>
+﻿<li class="nav-item sc-navitem">
+    <a class="nav-link sc-navlink" href="#top">
+        @Caption
+    </a>
+</li>
 
 @code {
 
+    [Parameter]
+    public string? Caption { get; set; }
 }

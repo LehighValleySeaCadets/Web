@@ -1,16 +1,34 @@
-﻿@inherits LayoutComponentBase
+﻿@using LVDivWebsite.Components
+@inherits LayoutComponentBase
 
 <div class="page">
     
-    <nav class="navbar navbar-expand-lg banner" style="--bs-bg-opacity: 1; background-color: #003662 !important">
+    <nav class="navbar navbar-expand-md navbar-light sc-navbar">
         <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">
-                    <img src="https://www.seacadets.firespike.online/wp-content/uploads/2022/07/chooseadventurelogo.webp" alt="America's Sea Cadets" id="logo" data-height-percentage="70" data-actual-width="371" data-actual-height="68" width="371" height="68">
-                </a>
+            <a class="navbar-brand" href="#">
+                <img src="https://www.seacadets.firespike.online/wp-content/uploads/2022/07/chooseadventurelogo.webp" 
+                alt="America's Sea Cadets" id="logo" data-height-percentage="70" data-actual-width="371" data-actual-height="68" width="371" height="68">
+            </a>
+
+            <!-- Toggle button for mobile nav-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" 
+            aria-controls="nain-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse justify-content-end align-center"
+            id="main-nav">
+                <ul class="navbar-nav">
+                    <NavLink_LVD Caption="Join" />
+                    <NavLink_LVD Caption="For Parents" />
+                    <NavLink_LVD Caption="Support" />
+                    <NavLink_LVD Caption="Media" />
+                    <NavLink_LVD Caption="Login" />
+                </ul>
             </div>
         </div>
-        <NavMenu />
+        <!-- <NavMenu /> -->
     </nav>
 
     <main>
@@ -22,4 +40,5 @@
             @Body
         </article>
     </main>
+    <Footer/>
 </div>
